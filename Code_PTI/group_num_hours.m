@@ -7,7 +7,7 @@ ncol = size(data,2);
 for c = 1:ncol
     tmp = [];
     for k = 1:floor(size(data,1)/num_hours) % 168 hrs en 7 dias
-        tmp(:,k) = data((k-1)*num_hours+1:k*num_hours,1);
+        tmp(:,k) = data((k-1)*num_hours+1:k*num_hours,c);
     end
     res{c} = tmp;
 end
