@@ -81,11 +81,6 @@ num_week = 4;
 %       mPM10_v2)
 % 3.- Cambios porcentuales de los perfiles promedio (rmO3_v1, rmO3_v2,
 % rmPM10_v1, rmPM10_v2)
-save ..\Data_PTI\cambios_porcentuales_O3_PM10_week4 rmO3_v1 rmO3_v2 rmPM10_v1 rmPM10_v2
 
-%% revision de los datos
-data = rmPM10_v2;
-for k=1:10
-    disp(sum(isnan(data{k})))
-end
+% save ..\Data_PTI\cambios_porcentuales_O3_PM10_week4 rmO3_v1 rmO3_v2 rmPM10_v1 rmPM10_v2
 
