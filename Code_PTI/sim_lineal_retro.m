@@ -2,6 +2,7 @@ function [T,predict] = sim_lineal_retro(data,rdata)
 T = [1:size(data,1)]';
 X = zeros(size(data));
 X(1,:) = data(1,:);
+X(1,isnan(X(1,:)))=0;
 L = 0.1;
 for t = 1:size(T,1)-1
     % Revisar si existe el sensor

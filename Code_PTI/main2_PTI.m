@@ -1,6 +1,6 @@
 load tabla_O3_PM10.mat
 
-%%Obtener las mediciones de una semana de los años 2014 y 2015
+%% Obtener las mediciones de una semana de los años 2014 y 2015
 PM10_week = [];
 O3_week = [];
 

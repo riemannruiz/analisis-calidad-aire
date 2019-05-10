@@ -53,6 +53,13 @@ O3_week2 = group_num_hours(table2array(O3_all(:,3:12)),num_hours);
 % Operaciones sobre el PM10
 PM10_week2 = group_num_hours(table2array(PM10_all(:,3:12)),num_hours);
 
+%% Visualizacion de los datos (opcional)
+% figure(1)
+% plot(PM10_week1{1,1}(:,1:104)),xlabel('Muestras cada 1hr en 7 días'),ylabel('PM10'),title('PM10 Atemajac (2015-2016)'),axis([1 num_hours -Inf Inf])
+% figure(2)
+% plot(O3_week1{1,1}(:,1:104)),xlabel('Muestras cada 1hr en 7 días'),ylabel('O3'),title('O3 Atemajac (2015-2016)'),axis([1 num_hours -Inf Inf])
+
+
 %% Solo para visualizar unos datos internos (opcional)
 % n=20;
 % subplot(2,1,1)
@@ -72,6 +79,16 @@ num_week = 4;
 [mO3_v2,rmO3_v2] = mean_ratio_by_weeks(O3_week2,num_week);
 [mPM10_v1,rmPM10_v1] = mean_ratio_by_weeks(PM10_week1,num_week);
 [mPM10_v2,rmPM10_v2] = mean_ratio_by_weeks(PM10_week2,num_week);
+
+%% Visualizacion de los 13 patrones resultantes de un contaminante.
+% figure(1);
+% for k = 1:13
+%     subplot(3,5,k);
+%     plot(1:168,mPM10_v1(1+168*(k-1):168*k));
+%     xlabel('hrs'),ylabel('PM10'),title(sprintf('Semanas (%d-%d)',1+4*(k-1),4*k));
+%     axis([1 168 -Inf Inf]);
+% end
+
 
 %% Guardar los resultados obtenidos del script
 % Los datos importantes son:
